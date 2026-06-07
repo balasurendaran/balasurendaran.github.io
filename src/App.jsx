@@ -19,7 +19,7 @@ export default function App() {
         <div className="container">
           <p className="hero-tag">Senior Software Engineer · Front End · React.js</p>
           <h1 className="hero-name">
-            Bala <span>Surendaran</span> R
+            Bala <span>Surendaran.</span> R
           </h1>
           <p className="hero-subtitle">
             {profile.company} &nbsp;·&nbsp; {profile.location} &nbsp;·&nbsp; {profile.experience} Years IT Experience
