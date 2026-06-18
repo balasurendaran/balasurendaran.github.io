@@ -16,7 +16,7 @@ export const profile = {
 export const stats = [
   { num: "8+", label: "Years Experience" },
   { num: "10", label: "Client Projects" },
-  { num: "5", label: "Side Projects" },
+  { num: "6", label: "Side Projects" },
   { num: "1", label: "npm Package" },
 ];
 
@@ -212,6 +212,18 @@ export const sideProjects = [
     description:
       "Pixieset-style client gallery platform using Immich for self-hosted photo storage. Multi-person sharing via access codes and magic links, with InsightFace facial recognition for smart photo organization.",
     tech: ["React.js", "Node.js", "Immich", "InsightFace AI", "Magic Links"],
+  },
+  {
+    id: 6,
+    name: "URL Visit Counter Tracker",
+    type: "Firefox Extension",
+    emoji: "🦊",
+    color: "#E66000",
+    live: true,
+    url: "https://addons.mozilla.org/en-US/firefox/addon/url-visit-counter-tracker/",
+    description:
+      "A published browser extension that tracks page visits and tab duplication in real-time. Displays a dynamic badge counter on the extension icon and shows duplicate alert banners to help manage and clean up duplicate browser tabs.",
+    tech: ["Firefox Add-on API", "JavaScript", "HTML/CSS", "WebExtensions API"],
   },
 ];
 

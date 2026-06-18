@@ -244,7 +244,7 @@ export default function App() {
                 { emoji: '⚛️', title: 'React Specialist', sub: '4+ years focused React delivery' },
                 { emoji: '🏢', title: 'Enterprise Track Record', sub: 'Samsung, Disney, Scopely' },
                 { emoji: '📦', title: 'npm Package Author', sub: 'uni-ui-form-builder (open source)' },
-                { emoji: '🚀', title: 'Indie Builder', sub: '5 side projects shipped' },
+                { emoji: '🚀', title: 'Indie Builder', sub: '6 side projects shipped' },
                 { emoji: '🎨', title: 'Design-to-Code Fluency', sub: 'Figma, Zeplin, Adobe XD' },
                 { emoji: '🔗', title: 'Full-Stack Background', sub: 'MERN, Electron.js, Blockchain' },
               ].map((c, i) => (
