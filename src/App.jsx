@@ -9,6 +9,49 @@ import './index.css';
 
 const TABS = ['Projects', 'Side Projects', 'Experience', 'Skills', 'About'];
 
+const getTechIconClass = (techName) => {
+  const name = techName.toLowerCase().trim();
+  if (name.includes('react.js') || name === 'react') return 'devicon-react-plain';
+  if (name.includes('next.js') || name === 'nextjs' || name === 'next.js dev') return 'devicon-nextjs-plain';
+  if (name.includes('redux')) return 'devicon-redux-original';
+  if (name.includes('jenkins')) return 'devicon-jenkins-line';
+  if (name.includes('github')) return 'devicon-github-original';
+  if (name.includes('gitlab')) return 'devicon-gitlab-plain';
+  if (name.includes('jira')) return 'devicon-jira-plain';
+  if (name.includes('confluence')) return 'devicon-confluence-plain';
+  if (name.includes('typescript') || name === 'ts') return 'devicon-typescript-plain';
+  if (name.includes('javascript') || name === 'js') return 'devicon-javascript-plain';
+  if (name.includes('angular')) return 'devicon-angularjs-plain';
+  if (name.includes('pwa')) return 'devicon-chrome-plain';
+  if (name.includes('jest')) return 'devicon-jest-plain';
+  if (name.includes('figma')) return 'devicon-figma-plain';
+  if (name.includes('zeplin')) return 'devicon-zeplin-plain';
+  if (name.includes('sketch')) return 'devicon-sketch-line';
+  if (name.includes('adobe xd') || name.includes('xd')) return 'devicon-xd-plain';
+  if (name.includes('photoshop')) return 'devicon-photoshop-plain';
+  if (name.includes('illustrator')) return 'devicon-illustrator-plain';
+  if (name.includes('linux')) return 'devicon-linux-plain';
+  if (name.includes('ubuntu')) return 'devicon-ubuntu-plain';
+  if (name.includes('centos')) return 'devicon-centos-plain';
+  if (name.includes('apache')) return 'devicon-apache-plain';
+  if (name.includes('nginx')) return 'devicon-nginx-original';
+  if (name.includes('cloudflare')) return 'devicon-cloudflare-plain';
+  if (name.includes('cpanel')) return 'devicon-cpanel-plain';
+  if (name.includes('plesk')) return 'devicon-plesk-plain';
+  if (name.includes('bash') || name.includes('shell') || name.includes('ssh')) return 'devicon-bash-plain';
+  if (name.includes('node')) return 'devicon-nodejs-plain';
+  if (name.includes('express')) return 'devicon-express-original';
+  if (name.includes('mongodb') || name.includes('mongo')) return 'devicon-mongodb-plain';
+  if (name.includes('mysql')) return 'devicon-mysql-plain';
+  if (name.includes('electron')) return 'devicon-electron-original';
+  if (name.includes('blockchain') || name.includes('tezos')) return 'devicon-tezos-plain';
+  if (name.includes('android')) return 'devicon-android-plain';
+  if (name.includes('npm')) return 'devicon-npm-original-wordmark';
+  if (name.includes('smtp')) return 'devicon-network-plain';
+  if (name.includes('open source')) return 'devicon-git-plain';
+  return null;
+};
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('Projects');
 
@@ -109,9 +152,15 @@ export default function App() {
                   <div className="role-badge">{p.role}</div>
                   <p className="project-desc">{p.description}</p>
                   <div className="tech-pills">
-                    {p.tech.map(t => (
-                      <span key={t} className={`pill ${p.highlight.includes(t) ? 'highlight' : ''}`}>{t}</span>
-                    ))}
+                    {p.tech.map(t => {
+                      const iconClass = getTechIconClass(t);
+                      return (
+                        <span key={t} className={`pill ${p.highlight.includes(t) ? 'highlight' : ''}`}>
+                          {iconClass && <i className={`${iconClass} pill-icon`} />}
+                          {t}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -134,9 +183,15 @@ export default function App() {
                   </div>
                   <p className="side-desc">{p.description}</p>
                   <div className="tech-pills" style={{ marginBottom: '14px' }}>
-                    {p.tech.map(t => (
-                      <span key={t} className="pill" style={p.id === 1 ? { background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.75)', border: '0.5px solid rgba(255,255,255,0.2)' } : {}}>{t}</span>
-                    ))}
+                    {p.tech.map(t => {
+                      const iconClass = getTechIconClass(t);
+                      return (
+                        <span key={t} className="pill" style={p.id === 1 ? { background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.75)', border: '0.5px solid rgba(255,255,255,0.2)' } : {}}>
+                          {iconClass && <i className={`${iconClass} pill-icon`} />}
+                          {t}
+                        </span>
+                      );
+                    })}
                   </div>
                   <div className="side-footer">
                     {p.live && (
@@ -209,9 +264,15 @@ export default function App() {
                 <div key={i} className="skill-group">
                   <div className="skill-group-title">{g.group}</div>
                   {g.items.map(item => (
-                    <div key={item} className="skill-item">
-                      <span className="skill-dot" />
-                      {item}
+                    <div key={item.name} className="skill-item">
+                      {item.icon ? (
+                        <span className="skill-icon-wrap">
+                          <i className={`${item.icon} skill-icon`} />
+                        </span>
+                      ) : (
+                        <span className="skill-dot" />
+                      )}
+                      {item.name}
                     </div>
                   ))}
                 </div>

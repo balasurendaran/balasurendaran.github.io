@@ -336,18 +336,41 @@ button { cursor: pointer; font-family: inherit; }
   flex-wrap: wrap;
   gap: 6px;
 }
+/* ── PILLS ── */
 .pill {
   font-size: 11px;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-radius: 100px;
   background: var(--bg);
   color: var(--text-secondary);
   border: 0.5px solid var(--border-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
 }
 .pill.highlight {
   background: var(--navy);
   color: rgba(255,255,255,0.85);
   border-color: var(--navy);
+}
+.pill-icon {
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.pill.highlight .pill-icon {
+  color: var(--gold);
+}
+.pill:hover {
+  transform: translateY(-1.5px);
+  border-color: var(--gold);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+.pill:hover .pill-icon {
+  color: var(--gold);
+  transform: scale(1.15);
 }
 
 /* ── SIDE PROJECTS ── */
@@ -583,13 +606,36 @@ button { cursor: pointer; font-family: inherit; }
 .skill-item {
   font-size: 13px;
   color: var(--text-secondary);
-  padding: 5px 0;
+  padding: 6px 8px;
+  margin: 1px -8px;
+  border-radius: var(--radius-sm);
   border-bottom: 0.5px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  transition: var(--transition);
 }
 .skill-item:last-child { border-bottom: none; }
+.skill-item:hover {
+  background: rgba(201,147,58,0.06);
+  color: var(--navy);
+  transform: translateX(3px);
+}
+.skill-icon-wrap {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.skill-item:hover .skill-icon-wrap {
+  color: var(--gold);
+  transform: scale(1.15);
+}
 .skill-dot {
   width: 5px; height: 5px;
   border-radius: 50%;

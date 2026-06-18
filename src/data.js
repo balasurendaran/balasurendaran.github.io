@@ -257,27 +257,69 @@ export const experience = [
 export const skills = [
   {
     group: "Core Frontend",
-    items: ["React.js (Primary · 4+ yrs)", "Next.js", "TypeScript", "JavaScript ES6+", "HTML5 & CSS3", "Angular.js"],
+    items: [
+      { name: "React.js (Primary · 4+ yrs)", icon: "devicon-react-plain" },
+      { name: "Next.js", icon: "devicon-nextjs-plain" },
+      { name: "TypeScript", icon: "devicon-typescript-plain" },
+      { name: "JavaScript ES6+", icon: "devicon-javascript-plain" },
+      { name: "HTML5 & CSS3", icon: "devicon-html5-plain" },
+      { name: "Angular.js", icon: "devicon-angularjs-plain" },
+    ],
   },
   {
     group: "State & Architecture",
-    items: ["Redux", "MobX", "Context API", "Webpack & Babel", "Yarn & NPM", "JWT Authentication"],
+    items: [
+      { name: "Redux", icon: "devicon-redux-original" },
+      { name: "MobX", icon: "devicon-mobx-plain" },
+      { name: "Context API", icon: "devicon-react-plain" },
+      { name: "Webpack & Babel", icon: "devicon-webpack-plain" },
+      { name: "Yarn & NPM", icon: "devicon-npm-original-wordmark" },
+      { name: "JWT Authentication", icon: "devicon-oauth-plain" },
+    ],
   },
   {
     group: "Backend & Databases",
-    items: ["Node.js", "Express.js", "MongoDB", "MySQL", "Electron.js", "REST APIs"],
+    items: [
+      { name: "Node.js", icon: "devicon-nodejs-plain" },
+      { name: "Express.js", icon: "devicon-express-original" },
+      { name: "MongoDB", icon: "devicon-mongodb-plain" },
+      { name: "MySQL", icon: "devicon-mysql-plain" },
+      { name: "Electron.js", icon: "devicon-electron-original" },
+      { name: "REST APIs", icon: "devicon-openapi-plain" },
+    ],
   },
   {
     group: "Testing & DevOps",
-    items: ["Jest.js Unit Testing", "Jenkins CI/CD", "GitHub / GitLab", "JIRA / Confluence", "PWA Development", "Webpack Build"],
+    items: [
+      { name: "Jest.js Unit Testing", icon: "devicon-jest-plain" },
+      { name: "Jenkins CI/CD", icon: "devicon-jenkins-line" },
+      { name: "GitHub / GitLab", icon: "devicon-github-original" },
+      { name: "JIRA / Confluence", icon: "devicon-jira-plain" },
+      { name: "PWA Development", icon: "devicon-chrome-plain" },
+      { name: "Webpack Build", icon: "devicon-webpack-plain" },
+    ],
   },
   {
     group: "Design Tools",
-    items: ["Figma", "Zeplin", "Sketch", "Adobe XD", "Photoshop", "Illustrator"],
+    items: [
+      { name: "Figma", icon: "devicon-figma-plain" },
+      { name: "Zeplin", icon: "devicon-zeplin-plain" },
+      { name: "Sketch", icon: "devicon-sketch-line" },
+      { name: "Adobe XD", icon: "devicon-xd-plain" },
+      { name: "Photoshop", icon: "devicon-photoshop-plain" },
+      { name: "Illustrator", icon: "devicon-illustrator-plain" },
+    ],
   },
   {
     group: "Infrastructure",
-    items: ["Linux (Ubuntu / CentOS)", "Apache / Nginx", "cPanel / Plesk", "SSH & Shell Scripting", "CDN — Cloudflare", "DNS & SSL"],
+    items: [
+      { name: "Linux (Ubuntu / CentOS)", icon: "devicon-linux-plain" },
+      { name: "Apache / Nginx", icon: "devicon-nginx-original" },
+      { name: "cPanel / Plesk", icon: "devicon-cpanel-plain" },
+      { name: "SSH & Shell Scripting", icon: "devicon-bash-plain" },
+      { name: "CDN — Cloudflare", icon: "devicon-cloudflare-plain" },
+      { name: "DNS & SSL", icon: "devicon-network-plain" },
+    ],
   },
 ];
 
