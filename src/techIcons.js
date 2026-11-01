@@ -1,0 +1,46 @@
+const RULES = [
+  [(n) => n.includes('react.js') || n === 'react', 'devicon-react-plain'],
+  [(n) => n.includes('next.js') || n === 'nextjs' || n === 'next.js dev', 'devicon-nextjs-plain'],
+  [(n) => n.includes('redux'), 'devicon-redux-original'],
+  [(n) => n.includes('jenkins'), 'devicon-jenkins-line'],
+  [(n) => n.includes('github'), 'devicon-github-original'],
+  [(n) => n.includes('gitlab'), 'devicon-gitlab-plain'],
+  [(n) => n.includes('jira'), 'devicon-jira-plain'],
+  [(n) => n.includes('confluence'), 'devicon-confluence-plain'],
+  [(n) => n.includes('typescript') || n === 'ts', 'devicon-typescript-plain'],
+  [(n) => n.includes('javascript') || n === 'js', 'devicon-javascript-plain'],
+  [(n) => n.includes('angular'), 'devicon-angularjs-plain'],
+  [(n) => n.includes('pwa'), 'devicon-chrome-plain'],
+  [(n) => n.includes('jest'), 'devicon-jest-plain'],
+  [(n) => n.includes('figma'), 'devicon-figma-plain'],
+  [(n) => n.includes('zeplin'), 'devicon-zeplin-plain'],
+  [(n) => n.includes('sketch'), 'devicon-sketch-line'],
+  [(n) => n.includes('xd'), 'devicon-xd-plain'],
+  [(n) => n.includes('photoshop'), 'devicon-photoshop-plain'],
+  [(n) => n.includes('illustrator'), 'devicon-illustrator-plain'],
+  [(n) => n.includes('linux'), 'devicon-linux-plain'],
+  [(n) => n.includes('ubuntu'), 'devicon-ubuntu-plain'],
+  [(n) => n.includes('centos'), 'devicon-centos-plain'],
+  [(n) => n.includes('apache'), 'devicon-apache-plain'],
+  [(n) => n.includes('nginx'), 'devicon-nginx-original'],
+  [(n) => n.includes('cloudflare'), 'devicon-cloudflare-plain'],
+  [(n) => n.includes('cpanel'), 'devicon-cpanel-plain'],
+  [(n) => n.includes('plesk'), 'devicon-plesk-plain'],
+  [(n) => n.includes('bash') || n.includes('shell') || n.includes('ssh'), 'devicon-bash-plain'],
+  [(n) => n.includes('node'), 'devicon-nodejs-plain'],
+  [(n) => n.includes('express'), 'devicon-express-original'],
+  [(n) => n.includes('mongo'), 'devicon-mongodb-plain'],
+  [(n) => n.includes('mysql'), 'devicon-mysql-plain'],
+  [(n) => n.includes('electron'), 'devicon-electron-original'],
+  [(n) => n.includes('blockchain') || n.includes('tezos'), 'devicon-tezos-plain'],
+  [(n) => n.includes('android'), 'devicon-android-plain'],
+  [(n) => n.includes('npm'), 'devicon-npm-original-wordmark'],
+  [(n) => n.includes('smtp'), 'devicon-network-plain'],
+  [(n) => n.includes('open source'), 'devicon-git-plain'],
+];
+
+export function getTechIconClass(techName) {
+  const name = techName.toLowerCase().trim();
+  const hit = RULES.find(([test]) => test(name));
+  return hit ? hit[1] : null;
+}
